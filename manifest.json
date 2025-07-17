@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "What's That?",
+  "version": "0.1.0",
+  "description": "Lightweight LLM Queries for your Curiosities",
+  "icons": {
+    "48": "public/icon-48.png",
+    "32": "public/icon-32.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_icon": "public/icon-48.png",
+    "default_title": "What's That?",
+    "default_popup": "src/pages/popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "<all_urls>"
+      ],
+      "js": [
+        "src/pages/content/index.tsx"
+      ],
+      "css": [
+        "contentStyle.css"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "121.0"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "public/contentStyle.css",
+        "public/icon-128.png",
+        "public/icon-48.png",
+        "public/icon-32.png"
+      ],
+      "matches": []
+    }
+  ]
+}
