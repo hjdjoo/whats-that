@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "NODE_ENV=dev vite build --watch --config vite.config.firefox.ts --mode development",
+    "dev:firefox": "NODE_ENV=dev vite build --watch --config vite.config.firefox.ts --mode development",
+    "dev:chrome": "NODE_ENV=dev vite build --watch --config vite.config.chrome.ts --mode development",
     "build": "vite build --config vite.config.firefox.ts NODE_ENV=prod"
   },
   "dependencies": {

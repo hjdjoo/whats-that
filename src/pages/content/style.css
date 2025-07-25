@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@utility left-* {
+  left-size: --value([integer])
+}
+@utility top-* {
+  top-size: --value([integer])
+}
