@@ -1,5 +1,6 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { encryptApiKey } from "@src/utils/crypto.web";
+import "webextension-polyfill";
 import browser from "webextension-polyfill";
 
 export default function Auth() {

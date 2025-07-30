@@ -13,7 +13,7 @@ export default mergeConfig(
         manifest: {
           ...baseManifest,
           background: {
-            scripts: ["browser-polyfill.js"],
+            // scripts: ["browser-polyfill.js"],
             service_worker: 'src/background/index.ts',
             type: 'module'
           },

@@ -1,5 +1,6 @@
 console.log("background script loaded");
 
+import "webextension-polyfill";
 import browser from "webextension-polyfill";
 import { decryptApiKey } from "@src/utils/crypto.web";
 import { isExtMessage } from "@src/utils/isExtMessage";
