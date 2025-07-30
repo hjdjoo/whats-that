@@ -3,7 +3,7 @@ import { mergeConfig, defineConfig } from 'vite';
 import { crx, ManifestV3Export } from '@crxjs/vite-plugin';
 import baseConfig, { baseManifest, baseBuildOptions } from './vite.config.base'
 
-const outDir = resolve(__dirname, 'dist_chrome');
+const outDir = resolve(__dirname, 'dist-chrome');
 
 export default mergeConfig(
   baseConfig,
@@ -13,6 +13,7 @@ export default mergeConfig(
         manifest: {
           ...baseManifest,
           background: {
+            scripts: ["browser-polyfill.js"],
             service_worker: 'src/background/index.ts',
             type: 'module'
           },

@@ -23,6 +23,7 @@
         "<all_urls>"
       ],
       "js": [
+        "browser-polyfill.js",
         "src/pages/content/index.tsx"
       ],
       "css": [

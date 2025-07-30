@@ -14,6 +14,7 @@ export default mergeConfig(
           ...baseManifest,
           background: {
             scripts: [
+              "browser-polyfill.js",
               "src/background/index.ts"
             ]
           }
